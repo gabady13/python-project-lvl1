@@ -8,7 +8,10 @@ build:
 	poetry build
 
 package-install:
-	pip install dist/*.whl
+	pip install --user dist/*.whl
 
 lint:
 	poetry run flake8 brain_games
+
+publish:
+	poetry publish --dry-run
