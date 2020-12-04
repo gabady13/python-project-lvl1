@@ -9,4 +9,4 @@ jobs:
      - uses: actions/checkout@v2
       
      - name: Run linter and pytest
-        run: make lint
+       run: make lint
