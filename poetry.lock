@@ -492,7 +492,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "9df5994d004f117d094cc177a9e8f84670faf992ef22cb59ddd7b6574e5d105f"
+content-hash = "d653e91e3fedf3dd05519e0cfea2d42789eef56526d98421ad5ae82b823460da"
 
 [metadata.files]
 astor = [

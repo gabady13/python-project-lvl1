@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 
+"""welcome user."""
+
 from brain_games.cli import welcome_user
 
 
 def main():
-    print("Welcome to the Brain Games!")
+    """Welcome user function."""
+    print('Welcome to the Brain Games!')
     welcome_user()
 
 
