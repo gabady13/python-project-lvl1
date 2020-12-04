@@ -2,13 +2,13 @@
 
 """welcome user."""
 
-import cli as cli
+from cli import welcome_user
 
 
 def main():
     """Welcome user function."""
     print('Welcome to the Brain Games!')
-    cli.welcome_user()
+    welcome_user()
 
 
 if __name__ == '__main__':
