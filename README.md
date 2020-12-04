@@ -5,4 +5,4 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
-[![SuperLinter](https://github.com/gabady13/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/gabady13/python-project-lvl1/actions)
+[![Github Actions Status](https://github.com/gabady13/python-project-lvl1/workflows/SuperLinter/badge.svg)](https://github.com/gabady13/python-project-lvl1/actions)
