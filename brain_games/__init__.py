@@ -1,1 +1,1 @@
-"""Package examples."""
+"""Welcome user."""

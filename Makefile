@@ -15,3 +15,6 @@ lint:
 
 publish:
 	poetry publish --dry-run
+
+brain-even:
+	poetry run brain-even
