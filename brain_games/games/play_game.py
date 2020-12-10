@@ -91,9 +91,9 @@ def ask_questions(game, name):
 
     if round_of_game < COUNT_ROUND:
         result_game = """\
-        '{0}' is wrong answer ;(. Correct answer was '{1}'\
-        Let's try again, {2}!\
-        """.format(answer_of_user, answer_correct, name)
+'{0}' is wrong answer ;(. Correct answer was '{1}'\
+Let's try again, {2}!\
+""".format(answer_of_user, answer_correct, name)
 
     else:
         result_game = 'Congratulations, {0}!'.format(name)
