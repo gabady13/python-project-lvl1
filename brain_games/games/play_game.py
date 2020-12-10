@@ -18,7 +18,6 @@ def show_rules(game):
     Parameters:
         game: name game
     """
-
     str_rules = ''
 
     if game is TYPE_OF_GAMES.even:
@@ -36,7 +35,6 @@ def get_question(game):
     Returns:
         question: question of game
     """
-
     question = None
 
     if game is TYPE_OF_GAMES.even:
@@ -55,7 +53,6 @@ def get_correct_answer(game, question):
     Returns:
         answer: correct answer
     """
-
     answer = None
 
     if game is TYPE_OF_GAMES.even:
@@ -108,7 +105,6 @@ def start_game(game):
         game: type of game
 
     """
-
     brain_games.main()
     name = get_name_user()
     show_rules(game)

@@ -5,7 +5,6 @@
 
 def main():
     """Welcome function."""
-
     print('Welcome to the Brain Games!')
 
 

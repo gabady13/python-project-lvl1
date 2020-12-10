@@ -7,7 +7,6 @@ from games import even
 
 def main():
     """Init game."""
-
     even.init_game()
 
 
