@@ -2,8 +2,8 @@
 
 """Init of game."""
 
-import play_game
 import constants
+import play_game
 
 
 def main():

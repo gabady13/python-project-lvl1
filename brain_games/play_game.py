@@ -5,8 +5,8 @@ import random
 import prompt
 
 import brain_games
-from cli import get_name_user
 import constants
+from cli import get_name_user
 
 TYPE_OF_GAMES = constants.TYPE_GAMES
 COUNT_ROUND = 3
