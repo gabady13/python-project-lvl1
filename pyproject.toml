@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "hexlet_code"
-version = "0.1.4"
+version = "0.1.7"
 description = ""
 authors = ["Sergey Golodyaev <gabadysergei@yandex.ru>"]
 packages = [
-  { include = "brain_games" },
+  { include = "brain_games"},
 ]
 
 [tool.poetry.dependencies]
