@@ -6,8 +6,9 @@ import prompt
 
 import brain_games
 from cli import get_name_user
-from games import type_games
+from games import constants
 
+TYPE_OF_GAMES = constants.TYPE_GAMES
 COUNT_ROUND = 3
 
 
@@ -20,7 +21,7 @@ def show_rules(game):
 
     str_rules = ''
 
-    if game.value == type_games.value_of_even():
+    if game is TYPE_OF_GAMES.even:
         str_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
     print(str_rules)
@@ -38,7 +39,7 @@ def get_question(game):
 
     question = None
 
-    if game.value == type_games.value_of_even():
+    if game is TYPE_OF_GAMES.even:
         question = random.randint(1, 1000)
 
     return question
@@ -57,7 +58,7 @@ def get_correct_answer(question, game):
 
     answer = None
 
-    if game.value == type_games.value_of_even():
+    if game is TYPE_OF_GAMES.even:
         if question % 2:
             answer = 'yes'
         else:
