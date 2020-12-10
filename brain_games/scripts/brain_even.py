@@ -2,7 +2,7 @@
 
 """Init of game."""
 
-from games import even
+import even
 
 
 def main():

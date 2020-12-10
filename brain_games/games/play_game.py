@@ -6,7 +6,7 @@ import prompt
 
 import brain_games
 from cli import get_name_user
-from games import constants
+import constants
 
 TYPE_OF_GAMES = constants.TYPE_GAMES
 COUNT_ROUND = 3
@@ -88,7 +88,7 @@ def ask_questions(game, name):
 
     if round_of_game < COUNT_ROUND:
         result_game = """\
-'{0}' is wrong answer ;(. Correct answer was '{1}'\
+'{0}' is wrong answer ;(. Correct answer was '{1}'
 Let's try again, {2}!\
 """.format(answer_of_user, answer_correct, name)
 
