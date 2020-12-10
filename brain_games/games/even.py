@@ -1,8 +1,7 @@
 
 """Welcome user."""
 
-import constants
-import play_game
+from games import constants, play_game
 
 
 def init_game():

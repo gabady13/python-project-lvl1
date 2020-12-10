@@ -2,7 +2,7 @@
 
 """Init of game."""
 
-import even
+from brain_games.games import even
 
 
 def main():
