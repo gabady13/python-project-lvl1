@@ -1,0 +1,111 @@
+"""Play games."""
+
+import random
+
+import prompt
+
+import brain_games
+from cli import get_name_user
+from games import type_games
+
+TYPES = type_games.type_of_games()
+COUNT_ROUND = 3
+
+
+def show_rules(game):
+    """Show rules of game.
+
+    Parameters:
+        game: name game
+    """
+
+    str_rules = ''
+
+    if game.value == TYPES.even.value:
+        str_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+    print(str_rules)
+
+
+def get_question(game):
+    """Get question of game.
+
+    Parameters:
+        game: name game
+
+    Returns:
+        question: question of game
+    """
+
+    question = None
+
+    if game.value == TYPES.even.value:
+        question = random.randint(1, 1000)
+
+    return question
+
+
+def get_correct_answer(question, game):
+    """Get question of game.
+
+    Parameters:
+        question: question
+        game: name game
+
+    Returns:
+        answer: correct answer
+    """
+
+    answer = None
+
+    if game.value == TYPES.even.value:
+        if question % 2:
+            answer = 'yes'
+        else:
+            answer = 'no'
+
+    return answer
+
+
+def ask_questions(game, name):
+    """Ask question.
+
+    Parameters:
+        game: type of game
+        name: name of user
+
+    """
+    answer_of_user = None
+    answer_correct = None
+    round_of_game = 0
+    while round_of_game < COUNT_ROUND:
+        question = get_question(game)
+        print('Question: {0}'.format(question))
+        answer_of_user = prompt.string('Your answer: ')
+        answer_correct = get_correct_answer(game, question)
+        if answer_of_user == answer_correct:
+            print('Correct!')
+            round_of_game += 1
+        else:
+            break
+
+    if round_of_game < COUNT_ROUND:
+        print("""'{0}' is wrong answer ;(. Correct answer was \
+                  '{1}'.\n Let's try again, \
+                  {2}!""".format(answer_of_user, answer_correct, name))
+    else:
+        print('Congratulations, {0}!'.format(name))
+
+
+def start_game(game):
+    """Play games.
+
+    Parameters:
+        game: type of game
+
+    """
+
+    brain_games.main()
+    name = get_name_user()
+    show_rules(game)
+    ask_questions(game, name)

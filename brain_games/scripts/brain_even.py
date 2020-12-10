@@ -1,16 +1,14 @@
 #!/usr/bin/env python
 
-"""welcome user."""
+"""Init of game."""
 
-
-import brain_games
 from games import even
 
 
 def main():
-    """Welcome user function."""
-    name = brain_games.main()
-    even.start_game(name)
+    """Init game."""
+
+    even.init_game()
 
 
 if __name__ == '__main__':

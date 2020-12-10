@@ -4,11 +4,11 @@
 import prompt
 
 
-def welcome_user():
+def get_name_user():
     """Do welcome and return user name.
 
     Returns:
-        name: yes or
+        name: name of user
 
     """
 
