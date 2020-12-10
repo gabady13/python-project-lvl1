@@ -18,3 +18,6 @@ publish:
 
 brain-even:
 	poetry run brain-even
+
+package-uninstall:
+	pip uninstall hexlet-code
