@@ -59,7 +59,7 @@ def get_correct_answer(question, game):
     answer = None
 
     if game is TYPE_OF_GAMES.even:
-        if question % 2:
+        if question % 2 == 0:
             answer = 'yes'
         else:
             answer = 'no'
