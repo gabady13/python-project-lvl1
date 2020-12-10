@@ -8,7 +8,6 @@ import brain_games
 from cli import get_name_user
 from games import type_games
 
-TYPES = type_games.type_of_games()
 COUNT_ROUND = 3
 
 
@@ -21,7 +20,7 @@ def show_rules(game):
 
     str_rules = ''
 
-    if game.value == TYPES.even.value:
+    if game.value == type_games.value_of_even():
         str_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
 
     print(str_rules)
@@ -39,7 +38,7 @@ def get_question(game):
 
     question = None
 
-    if game.value == TYPES.even.value:
+    if game.value == type_games.value_of_even():
         question = random.randint(1, 1000)
 
     return question
@@ -58,7 +57,7 @@ def get_correct_answer(question, game):
 
     answer = None
 
-    if game.value == TYPES.even.value:
+    if game.value == type_games.value_of_even():
         if question % 2:
             answer = 'yes'
         else:
@@ -90,11 +89,14 @@ def ask_questions(game, name):
             break
 
     if round_of_game < COUNT_ROUND:
-        print("""'{0}' is wrong answer ;(. Correct answer was \
-                  '{1}'.\n Let's try again, \
-                  {2}!""".format(answer_of_user, answer_correct, name))
+        result_game = (
+            """'{0}' is wrong answer ;(. Correct answer was '{1}'
+        Let's try again, {2}!""".format(answer_of_user, answer_correct, name)
+        )
     else:
-        print('Congratulations, {0}!'.format(name))
+        result_game = 'Congratulations, {0}!'.format(name)
+
+    print(result_game)
 
 
 def start_game(game):

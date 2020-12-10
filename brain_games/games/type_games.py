@@ -12,3 +12,13 @@ def type_of_games():
     """
 
     return Enum('game', 'even,calc,gcd,progression,prime')
+
+def value_of_even():
+    """Do type games.
+
+    Returns:
+        value: enum of games.
+
+    """
+
+    return type_of_games().even.value
