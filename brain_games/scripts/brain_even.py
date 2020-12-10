@@ -2,12 +2,13 @@
 
 """Init of game."""
 
-from games import even
+import play_game
+import constants
 
 
 def main():
     """Init game."""
-    even.init_game()
+    play_game.start_game(constants.TYPE_GAMES.even)
 
 
 if __name__ == '__main__':
