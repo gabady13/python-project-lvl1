@@ -45,7 +45,7 @@ def get_question(game):
     return question
 
 
-def get_correct_answer(question, game):
+def get_correct_answer(game, question):
     """Get question of game.
 
     Parameters:
