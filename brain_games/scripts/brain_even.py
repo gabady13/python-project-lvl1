@@ -2,7 +2,7 @@
 
 """Init of game."""
 
-from brain_game import constants, play_game
+from brain_games import constants, play_game
 
 
 def main():
