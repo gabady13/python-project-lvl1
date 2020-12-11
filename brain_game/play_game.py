@@ -4,9 +4,9 @@ import random
 
 import prompt
 
-import brain_games
-import constants
-from cli import get_name_user
+from brain_game.scripts import brain_games
+from brain_game import constants
+from brain_game import cli
 
 TYPE_OF_GAMES = constants.TYPE_GAMES
 COUNT_ROUND = 3
@@ -106,6 +106,6 @@ def start_game(game):
 
     """
     brain_games.main()
-    name = get_name_user()
+    name = cli.get_name_user()
     show_rules(game)
     ask_questions(game, name)
