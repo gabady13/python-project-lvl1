@@ -4,9 +4,8 @@ import random
 
 import prompt
 
+from brain_game import cli, constants
 from brain_game.scripts import brain_games
-from brain_game import constants
-from brain_game import cli
 
 TYPE_OF_GAMES = constants.TYPE_GAMES
 COUNT_ROUND = 3
