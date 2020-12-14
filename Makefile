@@ -19,5 +19,8 @@ publish:
 brain-even:
 	poetry run brain-even
 
+brain-calc:
+	poetry run brain-calc
+
 package-uninstall:
 	pip uninstall hexlet-code

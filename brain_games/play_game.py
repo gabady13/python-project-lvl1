@@ -21,6 +21,8 @@ def show_rules(game):
 
     if game is TYPE_OF_GAMES.even:
         str_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+    elif game is TYPE_OF_GAMES.calc:
+        str_rules = 'What is the result of the expression?'
 
     print(str_rules)
 
@@ -38,6 +40,11 @@ def get_question(game):
 
     if game is TYPE_OF_GAMES.even:
         question = random.randint(1, 1000)
+    elif game is TYPE_OF_GAMES.calc:
+        num_one = random.randint(1, 1000)
+        num_two = random.randint(1, 1000)
+        operation = random.choice(['*', '-', '+'])
+        question = '{0} {1} {2}'.format(num_one, operation, num_two)
 
     return question
 
@@ -59,6 +66,8 @@ def get_correct_answer(game, question):
             answer = 'yes'
         else:
             answer = 'no'
+    elif game is TYPE_OF_GAMES.calc:
+        answer = str(eval(question))
 
     return answer
 
