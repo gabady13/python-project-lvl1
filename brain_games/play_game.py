@@ -2,7 +2,7 @@
 
 import prompt
 
-from brain_games import cli, constants, question_and_answer
+from brain_games import answers, cli, constants, questions
 from brain_games.scripts import brain_game
 
 TYPE_OF_GAMES = constants.TYPE_GAMES
@@ -25,6 +25,8 @@ def show_rules(game):
         str_rules = 'What is the result of the expression?'
     elif game is TYPE_OF_GAMES.calc:
         str_rules = 'Find the greatest divisor of given numbers.'
+    elif game is TYPE_OF_GAMES.progression:
+        str_rules = 'What number is missing in the progression?'
 
     print(str_rules)
 
@@ -41,10 +43,10 @@ def ask_questions(game, name):
     answer_correct = None
     round_of_game = 0
     while round_of_game < COUNT_ROUND:
-        question = question_and_answer.get_question(game)
+        question = questions.get_question(game)
         print('Question: {0}'.format(question[REPRESENTATION]))
         answer_of_user = prompt.string('Your answer: ')
-        answer_correct = question_and_answer.get_correct_answer(game, question)
+        answer_correct = answers.get_correct_answer(game, question)
         if answer_of_user == answer_correct:
             print('Correct!')
             round_of_game += 1

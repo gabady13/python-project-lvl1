@@ -9,25 +9,6 @@ REPRESENTATION = 'REPRESENTATION'
 VAL = 'VALUE'
 
 
-def gcd(one_number, two_number):
-    """Find NOD of numbers.
-
-    Parameters:
-        one_number: numeric of NOD
-        two_number: numeric of NOD
-
-    Returns:
-        result: NOD
-    """
-    while one_number != 0 and two_number != 0:
-        if one_number > two_number:
-            one_number %= two_number
-        else:
-            two_number %= one_number
-
-    return one_number + two_number
-
-
 def get_question(game):
     """Get question of game.
 
@@ -45,12 +26,14 @@ def get_question(game):
         question = question_calc()
     elif game is TYPE_OF_GAMES.gcd:
         question = question_gcd()
+    elif game is TYPE_OF_GAMES.progression:
+        question = question_progression()
 
     return question
 
 
 def question_even():
-    """Get question of game.
+    """Get even question of game.
 
     Returns:
         question: question of game
@@ -60,7 +43,7 @@ def question_even():
 
 
 def question_calc():
-    """Get question of game.
+    """Get calc question of game.
 
     Returns:
         question: question of game
@@ -86,28 +69,28 @@ def question_gcd():
     return {REPRESENTATION: represent, VAL: gcd_value}
 
 
-def get_correct_answer(game, question):
-    """Get question of game.
-
-    Parameters:
-        question: question
-        game: name game
+def question_progression():
+    """Get  progression question of game.
 
     Returns:
-        answer: correct answer
+        question: question of game
     """
-    answer = None
+    index_space = random.randint(1, 10)
+    num_start = random.randint(1, 100)
+    num_iterator = random.randint(1, 100)
+    count_element = 1
+    progression_value = ''
+    represent = ''
 
-    if game is TYPE_OF_GAMES.even:
-        if question[REPRESENTATION] % 2 == 0:
-            answer = 'yes'
+    while count_element <= 10:
+
+        if count_element == index_space:
+            represent = '{0} {1}'.format(represent, '..')
+            progression_value = str(num_start)
         else:
-            answer = 'no'
-    elif game is TYPE_OF_GAMES.calc:
-        answer = str(eval(question[REPRESENTATION]))
-    elif game is TYPE_OF_GAMES.gcd:
-        num_one = question[VAL][0]
-        num_two = question[VAL][1]
-        answer = str(gcd(num_one, num_two))
+            represent = '{0} {1}'.format(represent, num_start)
 
-    return answer
+        num_start += num_iterator
+        count_element += 1
+
+    return {REPRESENTATION: represent, VAL: progression_value}
