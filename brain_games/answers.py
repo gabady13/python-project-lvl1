@@ -26,6 +26,48 @@ def gcd(one_number, two_number):
     return one_number + two_number
 
 
+def prime_number(number):
+    """Find number of numbers.
+
+    Parameters:
+        number: number of
+
+    Returns:
+        result: Prime
+    """
+    if number % 2 == 0:
+        return number == 2
+
+    odd_number = 3
+    while odd_number * odd_number <= number and number % odd_number != 0:
+        odd_number += 2
+
+    return odd_number * odd_number > number
+
+
+def get_yes_no(game, question):
+    """Find yes or no.
+
+    Parameters:
+        game: number of
+        question: question of
+
+    Returns:
+        result: yes or no
+    """
+    if game is TYPE_OF_GAMES.even:
+        if question[REPRESENTATION] % 2 == 0:
+            answer = 'yes'
+        else:
+            answer = 'no'
+    elif game is TYPE_OF_GAMES.prime:
+        if prime_number(question[REPRESENTATION]):
+            answer = 'yes'
+        else:
+            answer = 'no'
+    return answer
+
+
 def get_correct_answer(game, question):
     """Get answer of game.
 
@@ -38,11 +80,8 @@ def get_correct_answer(game, question):
     """
     answer = None
 
-    if game is TYPE_OF_GAMES.even:
-        if question[REPRESENTATION] % 2 == 0:
-            answer = 'yes'
-        else:
-            answer = 'no'
+    if game is TYPE_OF_GAMES.even or game is TYPE_OF_GAMES.prime:
+        answer = get_yes_no(game, question)
     elif game is TYPE_OF_GAMES.calc:
         answer = str(eval(question[REPRESENTATION]))
     elif game is TYPE_OF_GAMES.gcd:

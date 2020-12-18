@@ -20,7 +20,7 @@ def get_question(game):
     """
     question = None
 
-    if game is TYPE_OF_GAMES.even:
+    if game is TYPE_OF_GAMES.even or game is TYPE_OF_GAMES.prime:
         question = question_even()
     elif game is TYPE_OF_GAMES.calc:
         question = question_calc()

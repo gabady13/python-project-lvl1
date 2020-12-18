@@ -25,5 +25,8 @@ brain-calc:
 brain-progression:
 	poetry run brain-progression
 
+brain-prime:
+	poetry run brain-prime
+
 package-uninstall:
 	pip uninstall hexlet-code

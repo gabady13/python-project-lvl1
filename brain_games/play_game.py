@@ -11,24 +11,37 @@ REPRESENTATION = 'REPRESENTATION'
 VAL = 'VALUE'
 
 
+def rules_yes_or_no(game):
+    """Get rules of game.
+
+    Parameters:
+        game: name game
+
+    Returns:
+        question: question of game
+    """
+    rules = 'Answer "yes" if the number is {0}. Otherwise answer "no".'
+    return rules.format('prime'if game is TYPE_OF_GAMES.prime else 'even')
+
+
 def show_rules(game):
     """Show rules of game.
 
     Parameters:
         game: name game
     """
-    str_rules = ''
+    str_rul = ''
 
-    if game is TYPE_OF_GAMES.even:
-        str_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+    if game is TYPE_OF_GAMES.even or game is TYPE_OF_GAMES.prime:
+        str_rul = rules_yes_or_no(game)
     elif game is TYPE_OF_GAMES.calc:
-        str_rules = 'What is the result of the expression?'
+        str_rul = 'What is the result of the expression?'
     elif game is TYPE_OF_GAMES.calc:
-        str_rules = 'Find the greatest divisor of given numbers.'
+        str_rul = 'Find the greatest divisor of given numbers.'
     elif game is TYPE_OF_GAMES.progression:
-        str_rules = 'What number is missing in the progression?'
+        str_rul = 'What number is missing in the progression?'
 
-    print(str_rules)
+    print(str_rul)
 
 
 def ask_questions(game, name):
