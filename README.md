@@ -8,3 +8,7 @@
 [![Github Actions Status](https://github.com/gabady13/python-project-lvl1/workflows/SuperLinter/badge.svg)](https://github.com/gabady13/python-project-lvl1/actions)
 
 [![asciicast](https://asciinema.org/a/XsBOTbvqVE7DQfDnWZPEM9Tzr.svg)](https://asciinema.org/a/XsBOTbvqVE7DQfDnWZPEM9Tzr)
+
+[![asciicast](https://asciinema.org/a/1TlW99SDSNzn3bwFkZ8d2woNA.svg)](https://asciinema.org/a/1TlW99SDSNzn3bwFkZ8d2woNA)
+
+[![asciicast](https://asciinema.org/a/2ekOQtIIJuUVCRFldTjqkX6jd.svg)](https://asciinema.org/a/2ekOQtIIJuUVCRFldTjqkX6jd)
