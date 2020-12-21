@@ -80,17 +80,17 @@ def question_progression():
     num_iterator = random.randint(1, 100)
     count_element = 1
     progression_value = ''
-    represent = ''
+    represent_value = []
 
     while count_element <= 10:
 
         if count_element == index_space:
-            represent = '{0} {1}'.format(represent, '..')
+            represent_value.append('..')
             progression_value = str(num_start)
         else:
-            represent = '{0} {1}'.format(represent, num_start)
+            represent_value.append(str(num_start))
 
         num_start += num_iterator
         count_element += 1
 
-    return {REPRESENTATION: represent, VAL: progression_value}
+    return {REPRESENTATION: ' '.join(represent_value), VAL: progression_value}
