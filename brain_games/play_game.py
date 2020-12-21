@@ -2,7 +2,7 @@
 
 import prompt
 
-from brain_games import answers, cli, constants, questions
+from brain_games import answers, constants, questions
 from brain_games.scripts import brain_game
 
 TYPE_OF_GAMES = constants.TYPE_GAMES
@@ -85,7 +85,6 @@ def start_game(game):
         game: type of game
 
     """
-    brain_game.main()
-    name = cli.get_name_user()
+    name = brain_game.main()
     show_rules(game)
     ask_questions(game, name)
