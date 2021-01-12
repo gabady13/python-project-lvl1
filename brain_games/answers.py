@@ -49,8 +49,8 @@ def get_yes_no(game, question):
     """Find yes or no.
 
     Parameters:
-        game: number of
-        question: question of
+        game: number of game
+        question: question of game
 
     Returns:
         result: yes or no
