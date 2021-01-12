@@ -55,6 +55,7 @@ def get_yes_no(game, question):
     Returns:
         result: yes or no
     """
+    answer = 'no'
     if game is TYPE_OF_GAMES.even:
         if question[REPRESENTATION] % 2 == 0:
             answer = 'yes'
