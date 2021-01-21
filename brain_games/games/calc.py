@@ -1,6 +1,9 @@
 """Init of game."""
 
 import random
+from operator import add, mul, sub
+
+OPERATORS = ((add, '+'), (sub, '-'), (mul, '*'))
 
 
 def show_rules():
@@ -17,7 +20,7 @@ def get_question_and_answer():
     """
     num_one = random.randint(1, 1000)
     num_two = random.randint(1, 1000)
-    operation = random.choice(['*', '-', '+'])
-    represent = '{0} {1} {2}'.format(num_one, operation, num_two)
+    operation, sym = random.choice(OPERATORS)
+    represent = '{0} {1} {2}'.format(num_one, sym, num_two)
 
-    return represent, str(eval(represent))
+    return represent, str(operation(num_one, num_two))

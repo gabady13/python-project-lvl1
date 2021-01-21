@@ -38,4 +38,4 @@ def get_question_and_answer():
     num_two = num_one * random.randint(1, 100)
     represent = '{0} {1}'.format(num_one, num_two)
 
-    return represent, gcd(num_one, num_two)
+    return represent, str(gcd(num_one, num_two))

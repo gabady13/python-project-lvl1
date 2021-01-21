@@ -50,7 +50,7 @@ def get_name_user(module):
     """
     print('Welcome to the Brain Games!')
     print()
-    module.show_reles()
+    module.show_rules()
     print()
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
