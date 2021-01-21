@@ -1,4 +1,4 @@
 """Package all file."""
-from brain_games.games import calc, even, gcd, prime, progression
+from brain_games.games import calc, even, game, gcd, prime, progression
 
-__all__ = ['calc', 'prime', 'gcd', 'progression', 'even']
+__all__ = ['calc', 'prime', 'game', 'gcd', 'progression', 'even']
