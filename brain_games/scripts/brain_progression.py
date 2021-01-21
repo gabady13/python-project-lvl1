@@ -2,12 +2,12 @@
 
 """Init of game."""
 
-from brain_games import constants, play_game
+from brain_games import engine_game, games
 
 
 def main():
     """Init game."""
-    play_game.start_game(constants.TYPE_GAMES.progression)
+    engine_game.start_game(games.progression)
 
 
 if __name__ == '__main__':
