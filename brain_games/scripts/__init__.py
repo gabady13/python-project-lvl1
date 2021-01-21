@@ -1,1 +1,1 @@
-"""Package examples."""
+"""Package all file."""
