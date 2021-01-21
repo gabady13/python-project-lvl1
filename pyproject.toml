@@ -1,14 +1,17 @@
 [tool.poetry]
 name = "hexlet_code"
-version = "0.4.4"
+version = "0.4.5"
 description = ""
 authors = ["Sergey Golodyaev <gabadysergei@yandex.ru>"]
 packages = [
   { include = "brain_games"},
 ]
 
+[tool.poetry.dependencies]
+python = "^3.7"
+prompt = "^0.4.1"
+
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.14.1"
 flake8 = "^3.8.4"
 
 [build-system]
