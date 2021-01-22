@@ -38,7 +38,7 @@ Let's try again, {2}!\
     print(result_game)
 
 
-def get_name_user(module):
+def get_name_user(module=None):
     """Do welcome and return user name.
 
     Parameters:
@@ -50,8 +50,11 @@ def get_name_user(module):
     """
     print('Welcome to the Brain Games!')
     print()
-    module.show_rules()
-    print()
+
+    if module is not None:
+        module.show_rules()
+        print()
+
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
     return name

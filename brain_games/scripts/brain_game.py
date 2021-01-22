@@ -2,12 +2,12 @@
 
 """welcome user."""
 
-from brain_games import engine_game, games
+from brain_games import engine_game
 
 
 def main():
     """Welcome function."""
-    engine_game.get_name_user(games.game)
+    engine_game.get_name_user()
 
 
 if __name__ == '__main__':
