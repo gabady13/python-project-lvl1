@@ -2,10 +2,8 @@
 
 import random
 
-
-def show_rules():
-    """Show rules of game."""
-    print('What number is missing in the progression?')
+DESCRIPTION = 'What number is missing in the progression?'
+DIMENSION = 10
 
 
 def get_question_and_answer():
@@ -22,7 +20,7 @@ def get_question_and_answer():
     progression_value = ''
     represent_value = []
 
-    while count_element <= 10:
+    while count_element <= DIMENSION:
 
         if count_element == index_space:
             represent_value.append('..')

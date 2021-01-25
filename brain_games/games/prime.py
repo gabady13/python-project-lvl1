@@ -2,13 +2,10 @@
 
 import random
 
-
-def show_rules():
-    """Show rules of game."""
-    print('Answer "yes" if the number is prime. Otherwise answer "no".')
+DESCRIPTION = 'Answer "yes" if the number is prime. Otherwise answer "no".'
 
 
-def prime_number(number):
+def is_prime(number):
     """Find number of numbers.
 
     Parameters:
@@ -17,31 +14,11 @@ def prime_number(number):
     Returns:
         result: Prime
     """
-    if number % 2 == 0:
-        return number == 2
+    divider = 2
+    while number % divider != 0:
+        divider += 1
 
-    odd_number = 3
-    while odd_number * odd_number <= number and number % odd_number != 0:
-        odd_number += 2
-
-    return odd_number * odd_number > number
-
-
-def correct_answer(value_question):
-    """Find yes or no.
-
-    Parameters:
-        value_question: value question of game
-
-    Returns:
-        result: yes or no
-    """
-    if prime_number(value_question):
-        answer = 'yes'
-    else:
-        answer = 'no'
-
-    return answer
+    return number == divider
 
 
 def get_question_and_answer():
@@ -53,4 +30,9 @@ def get_question_and_answer():
     """
     random_value = random.randint(1, 1000)
 
-    return random_value, correct_answer(random_value)
+    if is_prime(random_value):
+        answer = 'yes'
+    else:
+        answer = 'no'
+
+    return random_value, answer

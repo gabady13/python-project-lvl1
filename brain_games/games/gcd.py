@@ -2,10 +2,7 @@
 
 import random
 
-
-def show_rules():
-    """Show rules of game."""
-    print('Find the greatest divisor of given numbers.')
+DESCRIPTION = 'Find the greatest divisor of given numbers.'
 
 
 def gcd(one_number, two_number):

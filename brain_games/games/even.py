@@ -2,29 +2,19 @@
 
 import random
 
-
-def show_rules():
-    """Show rules of game."""
-    print('Answer "yes" if the number is even. Otherwise answer "no".')
+DESCRIPTION = 'Answer "yes" if the number is even. Otherwise answer "no".'
 
 
-def correct_answer(value_question):
-    """Find yes or no.
+def is_even(number):
+    """Find even numbers.
 
     Parameters:
-        value_question: value question of game
+        number: number of
 
     Returns:
-        result: yes or no
+        result: even
     """
-    answer = 'no'
-
-    if value_question % 2 == 0:
-        answer = 'yes'
-    else:
-        answer = 'no'
-
-    return answer
+    return number % 2 == 0
 
 
 def get_question_and_answer():
@@ -36,4 +26,9 @@ def get_question_and_answer():
     """
     random_value = random.randint(1, 1000)
 
-    return random_value, correct_answer(random_value)
+    if is_even(random_value):
+        answer = 'yes'
+    else:
+        answer = 'no'
+
+    return random_value, answer

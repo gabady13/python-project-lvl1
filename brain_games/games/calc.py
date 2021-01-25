@@ -3,12 +3,8 @@
 import random
 from operator import add, mul, sub
 
+DESCRIPTION = 'What is the result of the expression?'
 OPERATORS = ((add, '+'), (sub, '-'), (mul, '*'))
-
-
-def show_rules():
-    """Show rules of game."""
-    print('What is the result of the expression?')
 
 
 def get_question_and_answer():
