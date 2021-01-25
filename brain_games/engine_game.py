@@ -23,7 +23,7 @@ def start_game(module):
     """Play games.
 
     Parameters:
-        module: module of game
+        module: module game of Brain
 
     """
     name = welcome_user()
