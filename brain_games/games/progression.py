@@ -6,6 +6,25 @@ DESCRIPTION = 'What number is missing in the progression?'
 DIMENSION = 10
 
 
+def generate_progression(start, diff, length):
+    """Generate new progression.
+
+    Parameters:
+        start: start progression
+        diff: difference progression
+        length: length progression
+
+    Returns:
+        progression: question of game
+    """
+    progression = []
+    while length > 0:
+        progression.append(str(start))
+        start += diff
+        length -= 1
+    return progression
+
+
 def get_question_and_answer():
     """Get even question of game.
 
@@ -13,22 +32,10 @@ def get_question_and_answer():
         question: question of game
         correct_answer: correct answer of question
     """
-    index_space = random.randint(1, 10)
-    num_start = random.randint(1, 100)
-    num_iterator = random.randint(1, 100)
-    count_element = 1
-    progression_value = ''
-    represent_value = []
-
-    while count_element <= DIMENSION:
-
-        if count_element == index_space:
-            represent_value.append('..')
-            progression_value = str(num_start)
-        else:
-            represent_value.append(str(num_start))
-
-        num_start += num_iterator
-        count_element += 1
-
+    missed_position = random.randint(1, DIMENSION)
+    start = random.randint(1, 100)
+    difference = random.randint(1, 100)
+    represent_value = generate_progression(start, difference, DIMENSION)
+    progression_value = represent_value[missed_position]
+    represent_value[missed_position] = '..'
     return ' '.join(represent_value), progression_value
