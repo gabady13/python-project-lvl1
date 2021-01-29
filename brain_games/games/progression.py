@@ -32,7 +32,7 @@ def get_question_and_answer():
         question: question of game
         correct_answer: correct answer of question
     """
-    missed_position = random.randint(1, DIMENSION)
+    missed_position = random.randint(0, DIMENSION - 1)
     start = random.randint(1, 100)
     difference = random.randint(1, 100)
     represent_value = generate_progression(start, difference, DIMENSION)
