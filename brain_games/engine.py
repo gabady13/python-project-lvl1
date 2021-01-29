@@ -34,8 +34,8 @@ def start_game(game):
     counter = 0
     while counter < COUNT_ROUND:
         question, answer_correct = game.get_question_and_answer()
-        text_question = 'Question: {0}\nYour answer:'.format(question)
-        answer_of_user = ask_question(text_question)
+        print('Question: {0}'.format(question))
+        answer_of_user = ask_question('Your answer: ')
         if answer_of_user == answer_correct:
             print('Correct!')
             counter += 1
