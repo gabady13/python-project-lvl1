@@ -24,11 +24,11 @@ def get_question_and_answer():
         question: question of game
         correct_answer: correct answer of question
     """
-    random_value = random.randint(1, 1000)
+    question = random.randint(1, 1000)
 
-    if is_even(random_value):
+    if is_even(question):
         answer = 'yes'
     else:
         answer = 'no'
 
-    return random_value, answer
+    return question, answer
